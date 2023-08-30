@@ -1,9 +1,9 @@
 :root {
-  --light-blue: rgba(142, 202, 230);
+  --light-blue: #b3dee5;
   --primary-blue: rgba(33, 158, 188);
-  --dark-blue: rgba(2, 48, 71);
+  --dark-blue: #31525b;
   --yellow: rgba(255, 183, 3, 1);
-  --orange: rgba(251, 133, 0, 1);
+  --orange: #FFA101;
 }
 
 /* Edwardian Script ITC */
@@ -31,7 +31,7 @@ body {
 
 .btn {
   background-color: var(--orange);
-  color: white;
+  color: #000;
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
@@ -45,6 +45,8 @@ body {
   margin: 0 auto;
   justify-content: center;
   transition-duration: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
 .paragraph {
@@ -58,7 +60,8 @@ body {
 }
 
 header {
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom, var(--primary-blue), var(--light-blue));
+
   height: 150px;
   position: fixed;
   top: 0;
@@ -72,7 +75,7 @@ main {
   color: #fff;
   font-size: 1rem;
   font-weight: 400;
-  background: radial-gradient(var(--light-blue), var(--primary-blue));
+  background: linear-gradient(to bottom, var(--light-blue), var(--primary-blue));
   color: white;
 }
 
@@ -106,7 +109,7 @@ main {
 }
 
 .videos {
-  background-color: var(--orange);
+  background: linear-gradient(to bottom, var(--orange), #fff);
   color: black;
 }
 
@@ -116,7 +119,7 @@ main {
 }
 
 .more-information {
-  background-color: var(--yellow);
+  background-color: var(--orange);
   padding: 40px 0;
   color: #000;
 }
@@ -145,7 +148,6 @@ main {
   text-shadow: 2px 2px 4px #000;
 }
 
-/* General styles for video cards */
 .video-card {
   margin: 15px 0;
   border: 2px solid var(--light-blue);
@@ -167,10 +169,12 @@ main {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.8);
+  border-left: 4px solid var(--orange);
+  border-right: 4px solid var(--orange);
 }
 
 .site-footer {
-  background-color: rgba(2, 48, 71, 0.5);
+  background-color: rgba(2, 48, 71, 0.6);
   color: white;
   height: auto;
   padding: 20px 0;
