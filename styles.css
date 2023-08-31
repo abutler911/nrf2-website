@@ -149,6 +149,11 @@ main {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.benefit-description {
+  display: none;
+}
+
+
 .videos {
   background: linear-gradient(to bottom, var(--orange), #fff);
   color: black;
