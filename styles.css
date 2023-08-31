@@ -1,10 +1,11 @@
 :root {
-  --light-blue: rgb(179, 222, 229);
+  --light-blue: #CCD9E2;
   --primary-blue: rgba(33, 158, 188);
-  --dark-blue: #31525b;
-  --yellow: rgba(255, 183, 3, 1);
-  --orange: #FFA101;
+  --dark-blue: #285185;
+  --yellow: #FCD752;
+  --orange: #D67940;
   --protandim-blue: rgba(1, 43, 86, 1);
+  --brown: #6F4849;
 }
 
 /* Edwardian Script ITC */
@@ -24,8 +25,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  padding-top: 150px;
-  font-family: 'Playfair Display', serif;
+  padding-top: 110px;
+  font-family: "Playfair Display", serif;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -37,7 +38,7 @@ body {
   border-radius: 10px;
   border: 1px solid black;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
@@ -69,17 +70,18 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
   animation: shimmer 2s infinite linear;
   -webkit-animation: shimmer 7s infinite linear;
 }
 
-
-
-
 @keyframes shimmer {
-  0%, 28.57% {
 
+  0%,
+  28.57% {
     left: -100%;
   }
 
@@ -88,11 +90,8 @@ body {
   }
 }
 
-
-
-
 .paragraph {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   font-weight: 400;
   text-align: justify;
@@ -103,25 +102,48 @@ body {
 
 header {
   background: linear-gradient(to bottom, var(--primary-blue), var(--light-blue));
-  height: 150px;
+  height: 110px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   text-align: center;
+  transition: background 0.1s ease-in-out;
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -ms-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
 }
 
 main {
-
   color: #fff;
   font-size: 1rem;
   font-weight: 400;
-  background: linear-gradient(to bottom, var(--light-blue), var(--primary-blue));
-  color: white;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 .main-section-image {
-  width: 80%;
+  width: 90%;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -143,7 +165,7 @@ main {
 
 .benefits {
   color: #000;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.2rem;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.7);
@@ -179,6 +201,13 @@ main {
   max-width: 300px;
   height: auto;
   padding-top: 10px;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+
+  margin-bottom: 20px;
+
 }
 
 .page-title {
@@ -211,7 +240,6 @@ main {
   font-weight: 600;
   text-align: center;
   text-shadow: 2px 2px 4px #000;
-
 }
 
 .testimonial-card {
@@ -229,7 +257,8 @@ main {
   padding: 20px 0;
 }
 
-.site-footer h2, .site-footer h3 {
+.site-footer h2,
+.site-footer h3 {
   margin-bottom: 15px;
 }
 
@@ -310,7 +339,6 @@ main {
   margin-top: 10px;
 }
 
-
 /* For small screens */
 @media (max-width: 768px) {
   .main-section-image {
@@ -335,7 +363,6 @@ iframe {
   width: 100%;
   height: auto;
 }
-
 
 /* For large screens */
 @media (min-width: 1200px) {
