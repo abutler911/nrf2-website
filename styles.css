@@ -153,6 +153,9 @@ main {
   display: none;
 }
 
+.tiny {
+  font-size: 0.7rem;
+}
 
 .videos {
   background: linear-gradient(to bottom, var(--orange), #fff);
